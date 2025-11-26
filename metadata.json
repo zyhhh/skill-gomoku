@@ -1,0 +1,5 @@
+{
+  "name": "技能五子棋",
+  "description": "趣味五子棋游戏。包含技能点系统、独特技能以及拥有不同性格和难度的AI对手。",
+  "requestFramePermissions": []
+}

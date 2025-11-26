@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill Gobang</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              wood: {
+                100: '#f7e7ce',
+                300: '#eecfa1',
+                500: '#d4a373',
+                700: '#a47148',
+                900: '#6f4e37',
+              }
+            },
+            animation: {
+              'bounce-slight': 'bounce-slight 1s infinite',
+              'pop-in': 'pop-in 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards',
+              'marquee': 'marquee 25s linear infinite',
+              'shake': 'shake 0.5s cubic-bezier(.36,.07,.19,.97) both',
+              'wind-swipe': 'wind-swipe 0.8s ease-in-out forwards',
+              'freeze': 'freeze 1s ease-in-out forwards',
+              'smash': 'smash 0.6s ease-out forwards',
+              'spin-fast': 'spin-fast 0.6s ease-in-out forwards',
+              'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
+              'spin-reverse': 'spin-reverse 0.8s ease-in-out forwards',
+            },
+            keyframes: {
+              'bounce-slight': {
+                '0%, 100%': { transform: 'translateY(-5%)' },
+                '50%': { transform: 'translateY(0)' },
+              },
+              'pop-in': {
+                '0%': { opacity: '0', transform: 'scale(0.5)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+              'marquee': {
+                '0%': { transform: 'translateX(100vw)' },
+                '100%': { transform: 'translateX(-100%)' },
+              },
+              'shake': {
+                '0%, 100%': { transform: 'translateX(0)' },
+                '10%, 30%, 50%, 70%, 90%': { transform: 'translateX(-4px) rotate(-1deg)' },
+                '20%, 40%, 60%, 80%': { transform: 'translateX(4px) rotate(1deg)' },
+              },
+              'wind-swipe': {
+                '0%': { transform: 'translateX(-120%) skewX(-20deg)', opacity: '0' },
+                '20%': { opacity: '1' },
+                '80%': { opacity: '1' },
+                '100%': { transform: 'translateX(120%) skewX(-20deg)', opacity: '0' },
+              },
+              'freeze': {
+                '0%': { opacity: '0', transform: 'scale(1.1)' },
+                '20%': { opacity: '0.8' },
+                '80%': { opacity: '0.8' },
+                '100%': { opacity: '0', transform: 'scale(1)' },
+              },
+              'smash': {
+                '0%': { transform: 'scale(3) translateY(-100px)', opacity: '0' },
+                '50%': { transform: 'scale(1) translateY(0)', opacity: '1' },
+                '70%': { transform: 'scale(1.2)' },
+                '100%': { transform: 'scale(1)', opacity: '0' },
+              },
+              'spin-fast': {
+                '0%': { transform: 'rotate(0deg)' },
+                '100%': { transform: 'rotate(360deg)' },
+              },
+              'fade-in-up': {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              'spin-reverse': {
+                '0%': { transform: 'rotate(360deg)' },
+                '100%': { transform: 'rotate(0deg)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
